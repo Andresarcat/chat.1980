@@ -21,7 +21,7 @@ const props = defineProps({
 const emit = defineEmits(['verified', 'cancel']);
 
 const { t } = useI18n();
-const { isOn1080 TICCloud } = useAccount();
+const { isOnTic1080Cloud } = useAccount();
 
 const OTP = 'otp';
 const BACKUP = 'backup';
@@ -44,7 +44,7 @@ const canSubmit = computed(() =>
 );
 
 const contactDescKey = computed(() =>
-  isOn1080 TICCloud.value ? 'CONTACT_DESC_CLOUD' : 'CONTACT_DESC_SELF_HOSTED'
+  isOnTic1080Cloud.value ? 'CONTACT_DESC_CLOUD' : 'CONTACT_DESC_SELF_HOSTED'
 );
 
 const focusInput = i => otpInputRefs.value[i]?.focus();

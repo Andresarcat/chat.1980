@@ -16,7 +16,7 @@ import SettingsLayout from '../SettingsLayout.vue';
 import ButtonV4 from 'next/button/Button.vue';
 
 const router = useRouter();
-const { currentAccount, isOn1080 TICCloud } = useAccount();
+const { currentAccount, isOnTic1080Cloud } = useAccount();
 const {
   captainEnabled,
   captainLimits,
@@ -77,7 +77,7 @@ const fetchAccountDetails = async () => {
 
 const handleBillingPageLogic = async () => {
   // If self-hosted, redirect to dashboard
-  if (!isOn1080 TICCloud.value) {
+  if (!isOnTic1080Cloud.value) {
     router.push({ name: 'home' });
     return;
   }

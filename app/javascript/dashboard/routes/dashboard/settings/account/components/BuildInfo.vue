@@ -10,18 +10,18 @@ import semver from 'semver';
 const { t } = useI18n();
 const { currentAccount } = useAccount();
 
-const latest1080 TICVersion = computed(() => {
+const latestTic1080Version = computed(() => {
   return currentAccount.value.latest_1080tic_version;
 });
 
 const globalConfig = useMapGetter('globalConfig/get');
 
 const hasAnUpdateAvailable = computed(() => {
-  if (!semver.valid(latest1080 TICVersion.value)) {
+  if (!semver.valid(latestTic1080Version.value)) {
     return false;
   }
 
-  return semver.lt(globalConfig.value.appVersion, latest1080 TICVersion.value);
+  return semver.lt(globalConfig.value.appVersion, latestTic1080Version.value);
 });
 
 const gitSha = computed(() => {
@@ -38,7 +38,7 @@ const copyGitSha = () => {
     <div v-if="hasAnUpdateAvailable && globalConfig.displayManifest">
       {{
         t('GENERAL_SETTINGS.UPDATE_1080TIC', {
-          latest1080 TICVersion: latest1080 TICVersion,
+          latestTic1080Version: latestTic1080Version,
         })
       }}
     </div>

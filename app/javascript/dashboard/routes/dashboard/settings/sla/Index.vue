@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      isOn1080 TICCloud: 'globalConfig/isOn1080 TICCloud',
+      isOnTic1080Cloud: 'globalConfig/isOnTic1080Cloud',
       isFeatureEnabledonAccount: 'accounts/isFeatureEnabledonAccount',
       records: 'sla/getSLA',
       currentUser: 'getCurrentUser',
@@ -126,7 +126,7 @@ export default {
       <SLAPaywallEnterprise
         v-if="isBehindAPaywall"
         :is-super-admin="isSuperAdmin"
-        :is-on-1080tic-cloud="isOn1080 TICCloud"
+        :is-on-1080tic-cloud="isOnTic1080Cloud"
         @upgrade="onClickCTA"
       />
       <SLAEmptyState

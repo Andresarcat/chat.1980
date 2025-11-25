@@ -42,7 +42,7 @@ const dummyCustomRolesData = [
 
 const router = useRouter();
 
-const isOn1080 TICCloud = useMapGetter('globalConfig/isOn1080 TICCloud');
+const isOnTic1080Cloud = useMapGetter('globalConfig/isOnTic1080Cloud');
 
 const currentUser = useMapGetter('getCurrentUser');
 const currentAccountId = useMapGetter('getCurrentAccountId');
@@ -51,7 +51,7 @@ const isSuperAdmin = computed(() => {
   return currentUser.value.type === 'SuperAdmin';
 });
 const i18nKey = computed(() =>
-  isOn1080 TICCloud.value ? 'PAYWALL' : 'ENTERPRISE_PAYWALL'
+  isOnTic1080Cloud.value ? 'PAYWALL' : 'ENTERPRISE_PAYWALL'
 );
 
 const goToBillingSettings = () => {
@@ -98,7 +98,7 @@ const tableHeaders = computed(() => {
       <BasePaywallModal
         feature-prefix="CUSTOM_ROLE"
         :i18n-key="i18nKey"
-        :is-on-1080tic-cloud="isOn1080 TICCloud"
+        :is-on-1080tic-cloud="isOnTic1080Cloud"
         :is-super-admin="isSuperAdmin"
         @upgrade="goToBillingSettings"
       />

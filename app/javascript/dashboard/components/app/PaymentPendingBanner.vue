@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      isOn1080 TICCloud: 'globalConfig/isOn1080 TICCloud',
+      isOnTic1080Cloud: 'globalConfig/isOnTic1080Cloud',
       getAccount: 'accounts/getAccount',
     }),
     bannerMessage() {
@@ -33,7 +33,7 @@ export default {
       return this.$t('GENERAL_SETTINGS.OPEN_BILLING');
     },
     shouldShowBanner() {
-      if (!this.isOn1080 TICCloud) {
+      if (!this.isOnTic1080Cloud) {
         return false;
       }
 

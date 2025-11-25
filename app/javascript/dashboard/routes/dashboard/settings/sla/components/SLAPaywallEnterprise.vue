@@ -7,14 +7,14 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  isOn1080 TICCloud: {
+  isOnTic1080Cloud: {
     type: Boolean,
     default: false,
   },
 });
 
 const emit = defineEmits(['upgrade']);
-const i18nKey = props.isOn1080 TICCloud ? 'PAYWALL' : 'ENTERPRISE_PAYWALL';
+const i18nKey = props.isOnTic1080Cloud ? 'PAYWALL' : 'ENTERPRISE_PAYWALL';
 </script>
 
 <template>
@@ -22,7 +22,7 @@ const i18nKey = props.isOn1080 TICCloud ? 'PAYWALL' : 'ENTERPRISE_PAYWALL';
     <BasePaywallModal
       feature-prefix="SLA"
       :i18n-key="i18nKey"
-      :is-on-1080tic-cloud="isOn1080 TICCloud"
+      :is-on-1080tic-cloud="isOnTic1080Cloud"
       :is-super-admin="isSuperAdmin"
       @upgrade="emit('upgrade')"
     />

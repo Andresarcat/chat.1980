@@ -63,7 +63,7 @@ export default {
   }),
   computed: {
     ...mapGetters({
-      isA1080 TICInstance: 'globalConfig/isA1080 TICInstance',
+      isATic1080Instance: 'globalConfig/isATic1080Instance',
     }),
     isAICTAModalDismissed() {
       return this.uiSettings.is_open_ai_cta_modal_dismissed;
@@ -74,7 +74,7 @@ export default {
         this.isAdmin &&
         !this.isAIIntegrationEnabled &&
         !this.isAICTAModalDismissed &&
-        this.isA1080 TICInstance
+        this.isATic1080Instance
       );
     },
     // Display a AI CTA button for agents and other admins who have not yet opened the AI assistance modal.

@@ -20,12 +20,12 @@ export default {
   },
   computed: {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
-    isA1080 TICInstance() {
+    isATic1080Instance() {
       return this.globalConfig.installationName === '1080 TIC';
     },
   },
   beforeMount() {
-    this.isLoading = this.isA1080 TICInstance;
+    this.isLoading = this.isATic1080Instance;
   },
   methods: {
     resizeContainers() {
@@ -70,7 +70,7 @@ export default {
         </div>
       </div>
       <Testimonials
-        v-if="isA1080 TICInstance"
+        v-if="isATic1080Instance"
         class="flex-1"
         @resize-containers="resizeContainers"
       />

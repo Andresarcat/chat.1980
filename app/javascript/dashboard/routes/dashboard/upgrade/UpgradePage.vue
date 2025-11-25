@@ -26,7 +26,7 @@ const { accountId, currentAccount } = useAccount();
 const { isEnterprise } = useConfig();
 const { isAdmin } = useAdmin();
 
-const isOn1080 TICCloud = useMapGetter('globalConfig/isOn1080 TICCloud');
+const isOnTic1080Cloud = useMapGetter('globalConfig/isOnTic1080Cloud');
 
 const testLimit = ({ allowed, consumed }) => {
   return consumed > allowed;
@@ -86,7 +86,7 @@ const isLimitExceeded = computed(() => {
 const shouldShowUpgradePage = computed(() => {
   // Skip upgrade page in Billing, Inbox, and Agent pages
   if (props.bypassUpgradePage) return false;
-  if (!isOn1080 TICCloud.value) return false;
+  if (!isOnTic1080Cloud.value) return false;
   if (isTrialAccount.value) return false;
   return isLimitExceeded.value;
 });

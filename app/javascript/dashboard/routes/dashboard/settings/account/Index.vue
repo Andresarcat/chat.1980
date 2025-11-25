@@ -62,7 +62,7 @@ export default {
       getAccount: 'accounts/getAccount',
       uiFlags: 'accounts/getUIFlags',
       isFeatureEnabledonAccount: 'accounts/isFeatureEnabledonAccount',
-      isOn1080 TICCloud: 'globalConfig/isOn1080 TICCloud',
+      isOnTic1080Cloud: 'globalConfig/isOnTic1080Cloud',
     }),
     showAutoResolutionConfig() {
       return this.isFeatureEnabledonAccount(
@@ -242,7 +242,7 @@ export default {
     <AutoResolve v-if="showAutoResolutionConfig" />
     <AudioTranscription v-if="showAudioTranscriptionConfig" />
     <AccountId />
-    <div v-if="!uiFlags.isFetchingItem && isOn1080 TICCloud">
+    <div v-if="!uiFlags.isFetchingItem && isOnTic1080Cloud">
       <AccountDelete />
     </div>
     <BuildInfo />

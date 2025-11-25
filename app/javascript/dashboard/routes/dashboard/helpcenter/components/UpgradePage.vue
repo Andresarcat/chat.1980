@@ -49,7 +49,7 @@ export default {
   computed: {
     ...mapGetters({
       accountId: 'getCurrentAccountId',
-      isOn1080 TICCloud: 'globalConfig/isOn1080 TICCloud', // Pending change text
+      isOnTic1080Cloud: 'globalConfig/isOnTic1080Cloud', // Pending change text
     }),
   },
   methods: {
@@ -81,14 +81,14 @@ export default {
           class="max-w-2xl text-base font-normal leading-6 text-left sm:text-center text-n-slate-11"
         >
           {{
-            isOn1080 TICCloud
+            isOnTic1080Cloud
               ? $t('HELP_CENTER.UPGRADE_PAGE.DESCRIPTION')
               : $t('HELP_CENTER.UPGRADE_PAGE.SELF_HOSTED_DESCRIPTION')
           }}
         </p>
       </div>
       <div
-        v-if="isOn1080 TICCloud"
+        v-if="isOnTic1080Cloud"
         class="flex flex-row gap-3 justify-start items-center sm:justify-center"
       >
         <NextButton

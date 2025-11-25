@@ -7,7 +7,7 @@ import FeatureSpotlight from 'dashboard/components-next/feature-spotlight/Featur
 import { documentsList } from 'dashboard/components-next/captain/pageComponents/emptyStates/captainEmptyStateContent.js';
 
 const emit = defineEmits(['click']);
-const { isOn1080 TICCloud } = useAccount();
+const { isOnTic1080Cloud } = useAccount();
 
 const onClick = () => {
   emit('click');
@@ -21,7 +21,7 @@ const onClick = () => {
     fallback-thumbnail="/assets/images/dashboard/captain/document-light.svg"
     fallback-thumbnail-dark="/assets/images/dashboard/captain/document-dark.svg"
     learn-more-url="https://chwt.app/captain-document"
-    :hide-actions="!isOn1080 TICCloud"
+    :hide-actions="!isOnTic1080Cloud"
     class="mb-8"
   />
   <EmptyStateLayout

@@ -206,7 +206,7 @@ export default {
         <woot-code
           :script="inbox.web_widget_script"
           lang="html"
-          :codepen-title="`${inbox.name} - 1080 TIC Widget Test`"
+          :codepen-title="`${inbox.name} - Tic1080 Widget Test`"
           enable-code-pen
         />
       </SettingsSection>

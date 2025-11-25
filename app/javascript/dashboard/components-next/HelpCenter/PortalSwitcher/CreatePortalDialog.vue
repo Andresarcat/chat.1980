@@ -109,7 +109,7 @@ const handleDialogConfirm = async () => {
     slug: state.slug,
     custom_domain: state.domain,
     blob_id: state.avatarBlobId || null,
-    color: '#2781F6', // The default color is set to 1080 TIC brand color
+    color: '#2781F6', // The default color is set to Tic1080 brand color
   };
   await createPortal(portal);
 };

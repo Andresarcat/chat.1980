@@ -7,7 +7,7 @@ import FeatureSpotlight from 'dashboard/components-next/feature-spotlight/Featur
 import { assistantsList } from 'dashboard/components-next/captain/pageComponents/emptyStates/captainEmptyStateContent.js';
 
 const emit = defineEmits(['click']);
-const { isOn1080 TICCloud } = useAccount();
+const { isOnTic1080Cloud } = useAccount();
 
 const onClick = () => {
   emit('click');
@@ -22,7 +22,7 @@ const onClick = () => {
     fallback-thumbnail-dark="/assets/images/dashboard/captain/assistant-dark.svg"
     learn-more-url="https://chwt.app/captain-assistant"
     class="mb-8"
-    :hide-actions="!isOn1080 TICCloud"
+    :hide-actions="!isOnTic1080Cloud"
   />
   <EmptyStateLayout
     :title="$t('CAPTAIN.ASSISTANTS.EMPTY_STATE.TITLE')"

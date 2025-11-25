@@ -12,10 +12,10 @@ const currentUser = useMapGetter('getCurrentUser');
 const isSuperAdmin = computed(() => {
   return currentUser.value.type === 'SuperAdmin';
 });
-const { accountId, isOn1080 TICCloud } = useAccount();
+const { accountId, isOnTic1080Cloud } = useAccount();
 
 const i18nKey = computed(() =>
-  isOn1080 TICCloud.value ? 'PAYWALL' : 'ENTERPRISE_PAYWALL'
+  isOnTic1080Cloud.value ? 'PAYWALL' : 'ENTERPRISE_PAYWALL'
 );
 const openBilling = () => {
   router.push({
@@ -34,7 +34,7 @@ const openBilling = () => {
       feature-prefix="SECURITY_SETTINGS.SAML"
       :i18n-key="i18nKey"
       :is-super-admin="isSuperAdmin"
-      :is-on-1080tic-cloud="isOn1080 TICCloud"
+      :is-on-1080tic-cloud="isOnTic1080Cloud"
       @upgrade="openBilling"
     />
   </div>

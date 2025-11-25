@@ -15,7 +15,7 @@ const getters = useStoreGetters();
 const { t } = useI18n();
 
 const globalConfig = getters['globalConfig/get'];
-const isA1080 TICInstance = getters['globalConfig/isA1080 TICInstance'];
+const isATic1080Instance = getters['globalConfig/isATic1080Instance'];
 
 const emailProviderList = computed(() => {
   return [
@@ -41,7 +41,7 @@ const emailProviderList = computed(() => {
       icon: 'i-woot-mail',
     },
   ].filter(providerConfig => {
-    if (isA1080 TICInstance.value) {
+    if (isATic1080Instance.value) {
       return true;
     }
     return providerConfig.isEnabled;

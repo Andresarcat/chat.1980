@@ -33,7 +33,7 @@ const emit = defineEmits([
   'closeMobileSidebar',
 ]);
 
-const { accountScopedRoute, isOn1080 TICCloud } = useAccount();
+const { accountScopedRoute, isOnTic1080Cloud } = useAccount();
 const store = useStore();
 const searchShortcut = useKbd([`$mod`, 'k']);
 const { t } = useI18n();
@@ -652,7 +652,7 @@ const menuItems = computed(() => {
         class="pointer-events-none absolute inset-x-0 -top-[31px] h-8 bg-gradient-to-t from-n-solid-2 to-transparent"
       />
       <SidebarChangelogCard
-        v-if="isOn1080 TICCloud && !isACustomBrandedInstance"
+        v-if="isOnTic1080Cloud && !isACustomBrandedInstance"
       />
       <div
         class="p-1 flex-shrink-0 flex w-full justify-between z-10 gap-2 items-center border-t border-n-weak shadow-[0px_-2px_4px_0px_rgba(27,28,29,0.02)]"
