@@ -49,7 +49,7 @@ export default {
   },
   data() {
     return {
-      latest1080 TICVersion: null,
+      latestTic1080Version: null,
       reconnectService: null,
     };
   },
@@ -81,7 +81,7 @@ export default {
     this.listenToThemeChanges();
     // If user locale is set, use it; otherwise use account locale
     this.setLocale(
-      this.uiSettings?.locale || window.1080ticConfig.selectedLocale
+      this.uiSettings?.locale || window.tic1080Config.selectedLocale
     );
   },
   unmounted() {
@@ -105,12 +105,12 @@ export default {
       this.$store.dispatch('setActiveAccount', {
         accountId: this.currentAccountId,
       });
-      const { locale, latest_1080tic_version: latest1080 TICVersion } =
+      const { locale, latest_1080tic_version: latestTic1080Version } =
         this.getAccount(this.currentAccountId);
       const { pubsub_token: pubsubToken } = this.currentUser || {};
       // If user locale is set, use it; otherwise use account locale
       this.setLocale(this.uiSettings?.locale || locale);
-      this.latest1080 TICVersion = latest1080 TICVersion;
+      this.latestTic1080Version = latestTic1080Version;
       vueActionCable.init(this.store, pubsubToken);
       this.reconnectService = new ReconnectService(this.store, this.router);
       window.reconnectService = this.reconnectService;
@@ -134,7 +134,7 @@ export default {
     class="flex flex-col w-full h-screen min-h-0"
     :dir="isRTL ? 'rtl' : 'ltr'"
   >
-    <UpdateBanner :latest-1080tic-version="latest1080 TICVersion" />
+    <UpdateBanner :latest-1080tic-version="latestTic1080Version" />
     <template v-if="currentAccountId">
       <PendingEmailVerificationBanner v-if="hideOnOnboardingView" />
       <PaymentPendingBanner v-if="hideOnOnboardingView" />
