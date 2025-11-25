@@ -100,12 +100,12 @@ export default {
       return '';
     },
     allowedLoginMethods() {
-      return window.1080ticConfig.allowedLoginMethods || ['email'];
+      return window.tic1080Config.allowedLoginMethods || ['email'];
     },
     showGoogleOAuth() {
       return (
         this.allowedLoginMethods.includes('google_oauth') &&
-        Boolean(window.1080ticConfig.googleOAuthClientId)
+        Boolean(window.tic1080Config.googleOAuthClientId)
       );
     },
     isFormValid() {

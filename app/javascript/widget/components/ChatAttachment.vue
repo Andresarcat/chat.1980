@@ -76,7 +76,7 @@ export default {
       this.isUploading = true;
       try {
         if (checkFileSizeLimit(file, this.fileUploadSizeLimit)) {
-          const { websiteToken } = window.1080ticWebChannel;
+          const { websiteToken } = window.tic1080WebChannel;
           const upload = new DirectUpload(
             file.file,
             `/api/v1/widget/direct_uploads?website_token=${websiteToken}`,

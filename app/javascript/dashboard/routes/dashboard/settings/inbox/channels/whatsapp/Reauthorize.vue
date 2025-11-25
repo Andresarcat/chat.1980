@@ -27,9 +27,9 @@ const { t } = useI18n();
 const isRequestingAuthorization = ref(false);
 const isLoadingFacebook = ref(true);
 
-const whatsappAppId = computed(() => window.1080ticConfig.whatsappAppId);
+const whatsappAppId = computed(() => window.tic1080Config.whatsappAppId);
 const whatsappConfigurationId = computed(
-  () => window.1080ticConfig.whatsappConfigurationId
+  () => window.tic1080Config.whatsappConfigurationId
 );
 
 const actionLabel = computed(() => {
@@ -184,7 +184,7 @@ onMounted(async () => {
     // Load Facebook SDK and initialize
     await setupFacebookSdk(
       whatsappAppId.value,
-      window.1080ticConfig?.whatsappApiVersion
+      window.tic1080Config?.whatsappApiVersion
     );
   } catch (error) {
     useAlert(t('INBOX.REAUTHORIZE.FACEBOOK_LOAD_ERROR'));

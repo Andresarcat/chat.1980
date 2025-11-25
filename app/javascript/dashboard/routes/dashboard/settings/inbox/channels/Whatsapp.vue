@@ -23,8 +23,8 @@ const PROVIDER_TYPES = {
 
 const hasWhatsappAppId = computed(() => {
   return (
-    window.1080ticConfig?.whatsappAppId &&
-    window.1080ticConfig.whatsappAppId !== 'none'
+    window.tic1080Config?.whatsappAppId &&
+    window.tic1080Config.whatsappAppId !== 'none'
   );
 });
 

@@ -16,11 +16,11 @@ const props = defineProps({
 const emit = defineEmits(['channelItemClick']);
 
 const hasFbConfigured = computed(() => {
-  return window.1080ticConfig?.fbAppId;
+  return window.tic1080Config?.fbAppId;
 });
 
 const hasInstagramConfigured = computed(() => {
-  return window.1080ticConfig?.instagramAppId;
+  return window.tic1080Config?.instagramAppId;
 });
 
 const isActive = computed(() => {

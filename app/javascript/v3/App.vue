@@ -9,7 +9,7 @@ export default {
   mounted() {
     this.setColorTheme();
     this.listenToThemeChanges();
-    this.setLocale(window.1080ticConfig.selectedLocale);
+    this.setLocale(window.tic1080Config.selectedLocale);
   },
   methods: {
     setColorTheme() {

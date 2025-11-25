@@ -48,7 +48,7 @@ export default {
       return this.inbox.provider_config?.source === 'embedded_signup';
     },
     whatsappAppId() {
-      return window.1080ticConfig?.whatsappAppId;
+      return window.tic1080Config?.whatsappAppId;
     },
     isForwardingEnabled() {
       return !!this.inbox.forwarding_enabled;

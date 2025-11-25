@@ -84,7 +84,7 @@ export default {
   methods: {
     async copyLinkToMessage() {
       const fullConversationURL =
-        window.1080ticConfig.hostURL +
+        window.tic1080Config.hostURL +
         frontendURL(
           conversationUrl({
             id: this.conversationId,

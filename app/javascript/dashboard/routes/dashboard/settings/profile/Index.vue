@@ -99,7 +99,7 @@ export default {
       globalConfig: 'globalConfig/get',
     }),
     isMfaEnabled() {
-      return parseBoolean(window.1080ticConfig?.isMfaEnabled);
+      return parseBoolean(window.tic1080Config?.isMfaEnabled);
     },
   },
   mounted() {

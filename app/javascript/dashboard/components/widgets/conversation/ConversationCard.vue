@@ -146,7 +146,7 @@ const onCardClick = e => {
   if (e.metaKey || e.ctrlKey) {
     e.preventDefault();
     window.open(
-      `${window.1080ticConfig.hostURL}${path}`,
+      `${window.tic1080Config.hostURL}${path}`,
       '_blank',
       'noopener,noreferrer'
     );

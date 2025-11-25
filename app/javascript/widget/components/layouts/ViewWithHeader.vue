@@ -20,7 +20,7 @@ export default {
       showPopoutButton: false,
       scrollPosition: 0,
       ticking: true,
-      disableBranding: window.1080ticWebChannel.disableBranding || false,
+      disableBranding: window.tic1080WebChannel.disableBranding || false,
       requestID: null,
     };
   },
@@ -30,7 +30,7 @@ export default {
       availableAgents: 'agent/availableAgents',
     }),
     portal() {
-      return window.1080ticWebChannel.portal;
+      return window.tic1080WebChannel.portal;
     },
     isHeaderCollapsed() {
       if (!this.hasIntroText) {

@@ -8,8 +8,8 @@ export default {
       // https://github.com/lynndylanhurley/devise_token_auth/issues/1466
       const baseUrl =
         'https://accounts.google.com/o/oauth2/auth/oauthchooseaccount';
-      const clientId = window.1080ticConfig.googleOAuthClientId;
-      const redirectUri = window.1080ticConfig.googleOAuthCallbackUrl;
+      const clientId = window.tic1080Config.googleOAuthClientId;
+      const redirectUri = window.tic1080Config.googleOAuthCallbackUrl;
       const responseType = 'code';
       const scope = 'email profile';
 

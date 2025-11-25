@@ -107,9 +107,9 @@ export default {
 
     runFBInit() {
       FB.init({
-        appId: window.1080ticConfig.fbAppId,
+        appId: window.tic1080Config.fbAppId,
         xfbml: true,
-        version: window.1080ticConfig.fbApiVersion,
+        version: window.tic1080Config.fbApiVersion,
         status: true,
       });
       window.fbSDKLoaded = true;

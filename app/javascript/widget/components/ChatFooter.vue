@@ -38,7 +38,7 @@ export default {
       return getContrastingTextColor(this.widgetColor);
     },
     hideReplyBox() {
-      const { allowMessagesAfterResolved } = window.1080ticWebChannel;
+      const { allowMessagesAfterResolved } = window.tic1080WebChannel;
       const { status } = this.conversationAttributes;
       return !allowMessagesAfterResolved && status === 'resolved';
     },
