@@ -12,6 +12,14 @@ COPY theme/colors.js /app/theme/colors.js
 # Copiar nuevos archivos de estilos CSS
 COPY app/javascript/dashboard/assets/scss/_1080tic-gradients.scss /app/app/javascript/dashboard/assets/scss/_1080tic-gradients.scss
 
+# Copiar package.json y pnpm-lock.yaml para instalar dependencias
+COPY package.json pnpm-lock.yaml /app/
+
+# Instalar pnpm y dependencias de Node.js
+RUN npm install -g pnpm@latest && \
+    cd /app && \
+    pnpm install --frozen-lockfile
+
 # Copiar archivos modificados (después de ejecutar replace-branding.ps1)
 # NOTA: Ejecuta replace-branding.ps1 ANTES de build de esta imagen
 COPY app/views /app/app/views
