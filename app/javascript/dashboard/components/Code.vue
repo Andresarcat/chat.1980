@@ -22,7 +22,7 @@ const props = defineProps({
   },
   codepenTitle: {
     type: String,
-    default: 'Chatwoot Codepen',
+    default: '1080 TIC Codepen',
   },
 });
 

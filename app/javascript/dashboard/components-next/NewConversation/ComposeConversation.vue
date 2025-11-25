@@ -7,7 +7,7 @@ import { useUISettings } from 'dashboard/composables/useUISettings';
 import { vOnClickOutside } from '@vueuse/components';
 import { useAlert } from 'dashboard/composables';
 import { ExceptionWithMessage } from 'shared/helpers/CustomErrors';
-import { debounce } from '@chatwoot/utils';
+import { debounce } from '@1080tic/utils';
 import { useKeyboardEvents } from 'dashboard/composables/useKeyboardEvents';
 import {
   searchContacts,
@@ -238,7 +238,7 @@ useKeyboardEvents(keyboardEvents);
   <div
     v-on-click-outside="[
       handleClickOutside,
-      // Fixed and edge case https://github.com/chatwoot/chatwoot/issues/10785
+      // Fixed and edge case https://github.com/1080tic/1080tic/issues/10785
       // This will prevent closing the compose conversation modal when the editor Create link popup is open
       { ignore: ['div.ProseMirror-prompt'] },
     ]"

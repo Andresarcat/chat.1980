@@ -7,10 +7,10 @@ import NextButton from 'dashboard/components-next/button/Button.vue';
 import Auth from 'dashboard/api/auth';
 
 const { t } = useI18n();
-const isOnChatwootCloud = useMapGetter('globalConfig/isOnChatwootCloud');
+const isOn1080 TICCloud = useMapGetter('globalConfig/isOn1080 TICCloud');
 
 const message = computed(() => {
-  if (isOnChatwootCloud.value) {
+  if (isOn1080 TICCloud.value) {
     return t('APP_GLOBAL.NO_ACCOUNTS.MESSAGE_CLOUD');
   }
   return t('APP_GLOBAL.NO_ACCOUNTS.MESSAGE_SELF_HOSTED');

@@ -1,0 +1,53 @@
+/* 1080 TIC Brand Gradient Styles */
+
+/* Primary gradient: Purple to Cyan at 50deg */
+.bg-gradient-1080 {
+  background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%);
+}
+
+/* Button gradient with hover effect */
+.btn-gradient-1080 {
+  background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-1080:hover {
+  background: linear-gradient(50deg, #4a1f6b 70%, #2bc4cd 30%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(86, 38, 126, 0.3);
+}
+
+/* Reverse gradient for variety */
+.bg-gradient-1080-reverse {
+  background: linear-gradient(50deg, #37e8f3 80%, #56267e 20%);
+}
+
+/* Subtle gradient for backgrounds */
+.bg-gradient-1080-subtle {
+  background: linear-gradient(50deg, rgba(86, 38, 126, 0.1) 80%, rgba(55, 232, 243, 0.1) 20%);
+}
+
+/* Text gradient */
+.text-gradient-1080 {
+  background: linear-gradient(50deg, #56267e 80%, #37e8f3 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card gradient overlay */
+.card-gradient-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-gradient-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(50deg, rgba(86, 38, 126, 0.05) 80%, rgba(55, 232, 243, 0.05) 20%);
+  pointer-events: none;
+}

@@ -4,23 +4,23 @@ import PortalSwitcher from './PortalSwitcher.vue';
 const portals = [
   {
     id: 1,
-    name: 'Chatwoot Help Center',
+    name: '1080 TIC Help Center',
     articles: 67,
-    domain: 'chatwoot.help',
+    domain: '1080tic.help',
     slug: 'help-center',
   },
   {
     id: 2,
-    name: 'Chatwoot Handbook',
+    name: '1080 TIC Handbook',
     articles: 42,
-    domain: 'chatwoot.help',
+    domain: '1080tic.help',
     slug: 'handbook',
   },
   {
     id: 3,
     name: 'Developer Documentation',
     articles: 89,
-    domain: 'dev.chatwoot.com',
+    domain: 'dev.1080tic.com',
     slug: 'docs',
   },
 ];

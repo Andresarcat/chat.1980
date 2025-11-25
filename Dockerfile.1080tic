@@ -1,0 +1,37 @@
+# Dockerfile for 1080 TIC Custom Chatwoot
+FROM chatwoot/chatwoot:latest
+
+# Etiquetas de la imagen
+LABEL maintainer="1080 TIC"
+LABEL description="Custom Chatwoot installation for 1080 TIC with branded colors and text"
+LABEL version="1.0.0"
+
+# Copiar archivos de colores personalizados
+COPY theme/colors.js /app/theme/colors.js
+
+# Copiar nuevos archivos de estilos CSS
+COPY app/javascript/dashboard/assets/scss/_1080tic-gradients.scss /app/app/javascript/dashboard/assets/scss/_1080tic-gradients.scss
+
+# Copiar archivos modificados (después de ejecutar replace-branding.ps1)
+# NOTA: Ejecuta replace-branding.ps1 ANTES de build de esta imagen
+COPY app/views /app/app/views
+COPY app/javascript /app/app/javascript
+COPY config /app/config
+COPY app/mailers /app/app/mailers
+
+# Variables de entorno de marca
+ENV INSTALLATION_NAME="1080 TIC"
+ENV BRAND_NAME="1080 TIC"
+
+# Recompilar assets con los nuevos colores y estilos
+# NOTA: Esto puede tardar varios minutos
+RUN SECRET_KEY_BASE=precompile_placeholder \
+    RAILS_LOG_TO_STDOUT=enabled \
+    bundle exec rake assets:precompile && \
+    rm -rf node_modules tmp/cache
+
+# Puerto de la aplicación
+EXPOSE 3000
+
+# Comando por defecto
+CMD ["bundle", "exec", "rails", "s", "-p", "3000", "-b", "0.0.0.0"]

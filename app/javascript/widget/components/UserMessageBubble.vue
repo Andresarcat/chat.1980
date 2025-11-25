@@ -1,6 +1,6 @@
 <script>
 import { useMessageFormatter } from 'shared/composables/useMessageFormatter';
-import { getContrastingTextColor } from '@chatwoot/utils';
+import { getContrastingTextColor } from '@1080tic/utils';
 
 export default {
   name: 'UserMessageBubble',

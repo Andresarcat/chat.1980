@@ -8,7 +8,7 @@ import SLAListItemLoading from './components/SLAListItemLoading.vue';
 import SLAPaywallEnterprise from './components/SLAPaywallEnterprise.vue';
 
 import { mapGetters } from 'vuex';
-import { convertSecondsToTimeUnit } from '@chatwoot/utils';
+import { convertSecondsToTimeUnit } from '@1080tic/utils';
 import { useAlert } from 'dashboard/composables';
 
 export default {
@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      isOnChatwootCloud: 'globalConfig/isOnChatwootCloud',
+      isOn1080 TICCloud: 'globalConfig/isOn1080 TICCloud',
       isFeatureEnabledonAccount: 'accounts/isFeatureEnabledonAccount',
       records: 'sla/getSLA',
       currentUser: 'getCurrentUser',
@@ -126,7 +126,7 @@ export default {
       <SLAPaywallEnterprise
         v-if="isBehindAPaywall"
         :is-super-admin="isSuperAdmin"
-        :is-on-chatwoot-cloud="isOnChatwootCloud"
+        :is-on-1080tic-cloud="isOn1080 TICCloud"
         @upgrade="onClickCTA"
       />
       <SLAEmptyState

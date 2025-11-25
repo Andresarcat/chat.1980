@@ -1,0 +1,38 @@
+version: '3'
+
+# Docker Compose simplificado - solo DB y servicios de soporte
+# Para desarrollo nativo con Ruby/Rails local
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres:/data/postgres
+    environment:
+      - POSTGRES_DB=chatwoot_dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=chatwoot_db_pass_2024
+
+  redis:
+    image: redis:alpine
+    restart: always
+    command: ["sh", "-c", "redis-server --requirepass \"$REDIS_PASSWORD\""]
+    environment:
+      - REDIS_PASSWORD=chatwoot_redis_pass_2024
+    volumes:
+      - redis:/data/redis
+    ports:
+      - '6379:6379'
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+volumes:
+  postgres:
+  redis:

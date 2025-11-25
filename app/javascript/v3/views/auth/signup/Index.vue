@@ -20,12 +20,12 @@ export default {
   },
   computed: {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
-    isAChatwootInstance() {
-      return this.globalConfig.installationName === 'Chatwoot';
+    isA1080 TICInstance() {
+      return this.globalConfig.installationName === '1080 TIC';
     },
   },
   beforeMount() {
-    this.isLoading = this.isAChatwootInstance;
+    this.isLoading = this.isA1080 TICInstance;
   },
   methods: {
     resizeContainers() {
@@ -70,7 +70,7 @@ export default {
         </div>
       </div>
       <Testimonials
-        v-if="isAChatwootInstance"
+        v-if="isA1080 TICInstance"
         class="flex-1"
         @resize-containers="resizeContainers"
       />

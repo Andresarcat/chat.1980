@@ -7,14 +7,14 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  isOnChatwootCloud: {
+  isOn1080 TICCloud: {
     type: Boolean,
     default: false,
   },
 });
 
 const emit = defineEmits(['upgrade']);
-const i18nKey = props.isOnChatwootCloud ? 'PAYWALL' : 'ENTERPRISE_PAYWALL';
+const i18nKey = props.isOn1080 TICCloud ? 'PAYWALL' : 'ENTERPRISE_PAYWALL';
 </script>
 
 <template>
@@ -22,7 +22,7 @@ const i18nKey = props.isOnChatwootCloud ? 'PAYWALL' : 'ENTERPRISE_PAYWALL';
     <BasePaywallModal
       feature-prefix="SLA"
       :i18n-key="i18nKey"
-      :is-on-chatwoot-cloud="isOnChatwootCloud"
+      :is-on-1080tic-cloud="isOn1080 TICCloud"
       :is-super-admin="isSuperAdmin"
       @upgrade="emit('upgrade')"
     />

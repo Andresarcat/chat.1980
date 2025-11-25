@@ -14,19 +14,33 @@ const {
 } = require('@radix-ui/colors');
 
 export const colors = {
+  // 1080 TIC Brand Colors - Purple (#56267e) and Cyan (#37e8f3)
   woot: {
-    25: blue.blue2,
-    50: blue.blue3,
-    75: blue.blue4,
-    100: blue.blue5,
-    200: blue.blue7,
-    300: blue.blue8,
-    400: blueDark.blue11,
-    500: blueDark.blue10,
-    600: blueDark.blue9,
-    700: blueDark.blue8,
-    800: blueDark.blue6,
-    900: blueDark.blue2,
+    25: '#f3ecf9',   // Lightest purple tint
+    50: '#e6d9f2',   // Light purple tint
+    75: '#d4c1eb',   // Medium-light purple
+    100: '#b399d9',  // Light purple
+    200: '#8f6fc4',  // Medium purple
+    300: '#7149a8',  // Medium-dark purple
+    400: '#56267e',  // Primary purple - BRAND COLOR
+    500: '#4a1f6b',  // Darker purple
+    600: '#3e1858',  // Very dark purple
+    700: '#321346',  // Almost black purple
+    800: '#260e33',  // Dark background purple
+    900: '#1a0820',  // Darkest purple
+  },
+  // Secondary brand color - Cyan
+  cyan: {
+    50: '#e6fcfd',   // Lightest cyan
+    100: '#ccf9fb',  // Light cyan
+    200: '#99f3f7',  // Medium-light cyan
+    300: '#66edf3',  // Medium cyan
+    400: '#37e8f3',  // Primary cyan - BRAND COLOR
+    500: '#2bc4cd',  // Darker cyan
+    600: '#20a0a7',  // Dark cyan
+    700: '#167c81',  // Very dark cyan
+    800: '#0d585b',  // Almost black cyan
+    900: '#053435',  // Darkest cyan
   },
   green: {
     50: greenDark.green12,
@@ -211,7 +225,7 @@ export const colors = {
     },
 
     black: '#000000',
-    brand: '#2781F6',
+    brand: '#56267e', // 1080 TIC Purple
     background: 'rgb(var(--background-color) / <alpha-value>)',
     solid: {
       1: 'rgb(var(--solid-1) / <alpha-value>)',

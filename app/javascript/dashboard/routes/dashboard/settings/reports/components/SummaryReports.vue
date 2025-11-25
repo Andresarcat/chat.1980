@@ -1,6 +1,6 @@
 <script setup>
 import ReportFilterSelector from './FilterSelector.vue';
-import { formatTime } from '@chatwoot/utils';
+import { formatTime } from '@1080tic/utils';
 import { useStore, useMapGetter } from 'dashboard/composables/store';
 import Table from 'dashboard/components/table/Table.vue';
 import { generateFileName } from 'dashboard/helper/downloadHelper';

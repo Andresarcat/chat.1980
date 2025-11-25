@@ -16,7 +16,7 @@ import SettingsLayout from '../SettingsLayout.vue';
 import ButtonV4 from 'next/button/Button.vue';
 
 const router = useRouter();
-const { currentAccount, isOnChatwootCloud } = useAccount();
+const { currentAccount, isOn1080 TICCloud } = useAccount();
 const {
   captainEnabled,
   captainLimits,
@@ -77,7 +77,7 @@ const fetchAccountDetails = async () => {
 
 const handleBillingPageLogic = async () => {
   // If self-hosted, redirect to dashboard
-  if (!isOnChatwootCloud.value) {
+  if (!isOn1080 TICCloud.value) {
     router.push({ name: 'home' });
     return;
   }
@@ -114,8 +114,8 @@ const onClickBillingPortal = () => {
 };
 
 const onToggleChatWindow = () => {
-  if (window.$chatwoot) {
-    window.$chatwoot.toggle();
+  if (window.$1080tic) {
+    window.$1080tic.toggle();
   }
 };
 
