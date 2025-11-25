@@ -9,7 +9,7 @@ import { hasAnUpdateAvailable } from './versionCheckHelper';
 export default {
   components: { Banner },
   props: {
-    latest1080 TICVersion: { type: String, default: '' },
+    latestTic1080Version: { type: String, default: '' },
   },
   setup() {
     const { isAdmin } = useAdmin();
@@ -24,13 +24,13 @@ export default {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
     updateAvailable() {
       return hasAnUpdateAvailable(
-        this.latest1080 TICVersion,
+        this.latestTic1080Version,
         this.globalConfig.appVersion
       );
     },
     bannerMessage() {
       return this.$t('GENERAL_SETTINGS.UPDATE_1080TIC', {
-        latest1080 TICVersion: this.latest1080 TICVersion,
+        latestTic1080Version: this.latestTic1080Version,
       });
     },
     shouldShowBanner() {
@@ -38,7 +38,7 @@ export default {
         !this.userDismissedBanner &&
         this.globalConfig.displayManifest &&
         this.updateAvailable &&
-        !this.isVersionNotificationDismissed(this.latest1080 TICVersion) &&
+        !this.isVersionNotificationDismissed(this.latestTic1080Version) &&
         this.isAdmin
       );
     },
@@ -53,9 +53,9 @@ export default {
       let updatedDismissedItems =
         LocalStorage.get(LOCAL_STORAGE_KEYS.DISMISSED_UPDATES) || [];
       if (updatedDismissedItems instanceof Array) {
-        updatedDismissedItems.push(this.latest1080 TICVersion);
+        updatedDismissedItems.push(this.latestTic1080Version);
       } else {
-        updatedDismissedItems = [this.latest1080 TICVersion];
+        updatedDismissedItems = [this.latestTic1080Version];
       }
       LocalStorage.set(
         LOCAL_STORAGE_KEYS.DISMISSED_UPDATES,
