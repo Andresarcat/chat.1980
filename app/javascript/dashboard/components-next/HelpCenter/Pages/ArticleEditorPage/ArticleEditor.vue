@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import { debounce } from '@1080tic/utils';
+import { debounce } from '@chatwoot/utils';
 import { useI18n } from 'vue-i18n';
 import { ARTICLE_EDITOR_MENU_OPTIONS } from 'dashboard/constants/editor';
 

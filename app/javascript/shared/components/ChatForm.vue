@@ -1,6 +1,6 @@
 <script>
 import { mapGetters } from 'vuex';
-import { getContrastingTextColor } from '@1080tic/utils';
+import { getContrastingTextColor } from '@chatwoot/utils';
 
 export default {
   props: {

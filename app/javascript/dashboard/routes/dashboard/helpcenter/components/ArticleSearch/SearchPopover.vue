@@ -1,5 +1,5 @@
 <script>
-import { debounce } from '@1080tic/utils';
+import { debounce } from '@chatwoot/utils';
 import { useAlert } from 'dashboard/composables';
 import { mapGetters } from 'vuex';
 import allLocales from 'shared/constants/locales.js';

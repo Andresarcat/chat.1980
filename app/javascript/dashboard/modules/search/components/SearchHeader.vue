@@ -1,6 +1,6 @@
 <script setup>
 import { ref, useTemplateRef, onMounted, onUnmounted, watch } from 'vue';
-import { debounce } from '@1080tic/utils';
+import { debounce } from '@chatwoot/utils';
 
 const props = defineProps({
   initialQuery: {
